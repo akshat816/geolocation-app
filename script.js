@@ -5,7 +5,19 @@ function shareLocation() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
-        const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+        function isMobileDevice() {
+          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          );
+        }
+
+        let url;
+
+        if (isMobileDevice()) {
+          url = `https://maps.google.com/?q=${latitude},${longitude}`;
+        } else {
+          url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+        }
         const message = `Check out my location: ${url}`;
 
         if (navigator.share) {
@@ -13,7 +25,7 @@ function shareLocation() {
             .share({
               title: "My Location",
               text: message,
-              url: url,
+              //   url: url,
             })
             .then(() => console.log("Shared successfully"))
             .catch((error) => console.error("Error sharing:", error));
