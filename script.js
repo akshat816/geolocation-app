@@ -1,35 +1,35 @@
-// function getKanyeQuote() {
-//   fetch("https://api.kanye.rest/")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//       const quote = data.quote;
-//       const quoteContainer = document.createElement("div");
-//       const italicQuote = document.createElement("em");
-//       italicQuote.classList.add("kanye");
-//       italicQuote.innerText = `"${quote}"`;
+function getKanyeQuote() {
+  fetch("https://api.kanye.rest/")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      const quote = data.quote;
+      const quoteContainer = document.createElement("div");
+      const italicQuote = document.createElement("em");
+      italicQuote.classList.add("kanye");
+      italicQuote.innerText = `"${quote}"`;
 
-//       // Append the quote container below the main container
-//       const container = document.querySelector("body");
-//       italicQuote.appendChild(quoteContainer);
-//       container.appendChild(italicQuote);
+      // Append the quote container below the main container
+      const container = document.querySelector("body");
+      italicQuote.appendChild(quoteContainer);
+      container.appendChild(italicQuote);
 
-//       const kanye = document.createElement("div");
-//       kanye.classList.add("kanye");
-//       kanye.classList.add("kanye-name");
-//       kanye.innerText = `-Kanye West`;
+      const kanye = document.createElement("div");
+      kanye.classList.add("kanye");
+      kanye.classList.add("kanye-name");
+      kanye.innerText = `-Kanye West`;
 
-//       // Append the quote container below the main container
-//       container.appendChild(kanye);
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching Kanye quote:", error);
-//     });
-// }
+      // Append the quote container below the main container
+      container.appendChild(kanye);
+    })
+    .catch((error) => {
+      console.error("Error fetching Kanye quote:", error);
+    });
+}
 
-// window.onload = function () {
-//   getKanyeQuote();
-// };
+window.onload = function () {
+  getKanyeQuote();
+};
 
 function shareLocation() {
   if ("geolocation" in navigator) {
