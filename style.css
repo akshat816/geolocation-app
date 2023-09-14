@@ -3,6 +3,20 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: url('bg.jpg');
+  animation: moveBackground 100s linear infinite;
+}
+
+@keyframes moveBackground {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 100% 0;
+  }
 }
 
 .container {
@@ -24,31 +38,50 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-        /* Container Styles */
-        .container {
-          width: 300px;
-          height: 300px;
-          background-color: #ccc; /* Gray background color */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+  /* Container Styles */
+  .container {
+    width: 300px;
+    height: 300px;
+    background-color: #ccc; /* Gray background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-      /* Button Styles */
-      .minimal-button {
-          padding: 10px 20px;
-          background-color: #f0f0f0;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          font-size: 16px;
-          color: #333;
-          text-decoration: none;
-          cursor: pointer;
-          transition: background-color 0.3s, color 0.3s;
-      }
+/* Button Styles */
+.minimal-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-      /* Button Hover Effect */
-      .minimal-button:hover {
-          background-color: #333;
-          color: #fff;
-      }
+/* Button Hover Effect */
+.minimal-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+@keyframes body {
+  from {
+      background-position: 0 0;
+  }
+  to {
+      background-position: 100% 0;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    animation: moveBackground 20s linear infinite;
+  }
+
+  .container {
+    margin-top: 200px;
+  }
+}
