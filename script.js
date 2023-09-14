@@ -27,9 +27,9 @@ function getKanyeQuote() {
     });
 }
 
-window.onload = function () {
-  getKanyeQuote();
-};
+// window.onload = function () {
+//   getKanyeQuote();
+// };
 
 function shareLocation() {
   if ("geolocation" in navigator) {
