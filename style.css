@@ -4,20 +4,8 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background: url('bg.jpg');
-  animation: moveBackground 500s linear infinite;
 }
 
-@keyframes moveBackground {
-  from {
-      background-position: 0 0;
-  }
-  to {
-      background-position: 100% 0;
-  }
-}
 
 .container {
   max-width: 600px;
@@ -38,17 +26,16 @@ body {
   text-align: center;
   margin-top: 20px;
 }
-  /* Container Styles */
-  .container {
+
+.container {
     width: 300px;
     height: 300px;
-    background-color: #ccc; /* Gray background color */
+    background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Button Styles */
 .minimal-button {
     padding: 10px 20px;
     background-color: #f0f0f0;
@@ -61,27 +48,31 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Button Hover Effect */
 .minimal-button:hover {
     background-color: #333;
     color: #fff;
 }
 
-@keyframes body {
-  from {
-      background-position: 0 0;
-  }
-  to {
-      background-position: 100% 0;
-  }
-}
-
 @media screen and (min-width: 767px) {
-  body {
-    animation: moveBackground 1000s linear infinite;
-  }
-
   .container {
     margin-top: 200px;
   }
+}
+
+.quote {
+  color: black;
+}
+
+.kanye {
+  display: flex;
+  padding-top: 50px;
+  width: 300px; /* Keep the fixed width */
+  margin: 0 auto; /* Center horizontally */
+  align-items: center;
+  justify-content: center;
+}
+
+.kanye-name {
+  padding-top: 0px;
+  margin-top: 5px;
 }
