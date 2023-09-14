@@ -66,8 +66,8 @@ body {
 .kanye {
   display: flex;
   padding-top: 50px;
-  width: 300px; /* Keep the fixed width */
-  margin: 0 auto; /* Center horizontally */
+  width: 300px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
 }
@@ -75,4 +75,4 @@ body {
 .kanye-name {
   padding-top: 0px;
   margin-top: 5px;
-} */
+}  */
