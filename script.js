@@ -9,7 +9,6 @@ function getKanyeQuote() {
       italicQuote.classList.add("kanye");
       italicQuote.innerText = `"${quote}"`;
 
-      // Append the quote container below the main container
       const container = document.querySelector("body");
       italicQuote.appendChild(quoteContainer);
       container.appendChild(italicQuote);
@@ -19,7 +18,6 @@ function getKanyeQuote() {
       kanye.classList.add("kanye-name");
       kanye.innerText = `-Kanye West`;
 
-      // Append the quote container below the main container
       container.appendChild(kanye);
     })
     .catch((error) => {
